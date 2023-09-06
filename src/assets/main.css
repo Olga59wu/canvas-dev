@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    label {
+        @apply cursor-pointer
+    }
+}
+
+@layer components {
+    .modal {
+        @apply w-3/4 h-4/5 bg-white px-5 rounded
+    }
+
+    .modal-header {
+        @apply pt-3 pb-2 text-right
+    }
+
+    .modal-body {
+        @apply h-9/10 text-right
+    }
+}
+
+@layer utilities {
+    .mask {
+        @apply absolute top-0 left-0 z-module flex justify-center items-center w-full h-full bg-black/50
+    }
+
+    .onMapList {
+        @apply absolute z-onMap top-10
+    }
+
+    .onMapList li {
+        @apply mb-3
+    }
+
+    .onMapList-base {
+        @apply block bg-gray-200/75 w-48 px-10 py-2 text-center rounded-r-md
+    }
+
+    .onMapList-base-action {
+        @apply bg-black text-white font-bold w-60 px-10 opacity-70;
+    }
+
+    .opMapList-content {
+        @apply max-h-0 bg-black text-white px-4 rounded-br-md opacity-70 overflow-hidden transition-all duration-300;
+    }
+
+    .opMapList-content li {
+        @apply mb-2
+    }
+
+    .opMapList-content input[type="text"]{
+        @apply  text-gray-700 font-bold opacity-70;
+    }
+
+    .onMapList-content-action {
+        @apply max-h-screen py-1;
+    }
+
+    @variants hover {
+        .onMapList-base {
+            @apply hover:w-60 transition-all duration-300;
+            @apply hover:font-bold transition-all duration-300;
+        }
+    }
+}
